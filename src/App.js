@@ -23,7 +23,7 @@ function App() {
     const AppContainer = styled.div `
       max-width: 1300px;
       width 100%;
-      margin: 0 auto;
+      margin: 0 auto 4%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
