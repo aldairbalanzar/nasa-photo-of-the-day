@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
+import styled from 'styled-components';
 import ImgContainer from "./ImgContainer";
 
 function App() {
@@ -18,11 +19,25 @@ function App() {
             console.log("no picture to catch...", err);
         })
     }, []);
+
+    const AppContainer = styled.div `
+      max-width: 1300px;
+      width 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    `;
+
+    const AppTitle = styled.h2 `
+      width: 100%;
+    `;
+
   return (
-    <div className="App">
-      <h2>Today's photo:</h2>
+    <AppContainer className="App">
+      <AppTitle>Today's photo:</AppTitle>
       <ImgContainer data={data} />
-    </div>
+    </AppContainer>
   );
 }
 
